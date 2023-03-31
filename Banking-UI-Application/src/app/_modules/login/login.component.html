@@ -1,0 +1,39 @@
+<mat-card id="login-page">
+    <div fxLayout = "column">
+      <div fxFlexAlign = "center">
+        <img [src] = "bank_log_url" alt="bank_logo" class= "bank_logo" />
+      </div>   
+    </div>
+    <div class="card-body">
+       <mat-card class="login-card">
+          <h2>Banking Application</h2>
+          <mat-divider></mat-divider>
+          <div *ngIf="displayErrorMessage" class="errorBlock">
+            <div class="errorIcon">
+               <mat-icon class="error-mat-icon-color">error_outline</mat-icon>
+            </div>
+            <div class="errorMessage">
+              <mat-error>{{errorMessage}}</mat-error>
+            </div>
+          </div>
+          <form [formGroup]="loginForm" id="login-form" (ngSubmit)="onSubmit()">
+            <div class="form-control-alignment">
+              <input type="search" maxlength="7" placeholder="Username" formControlName="userId" class="form-control-input border-r-p75"
+              [ngClass]="{ 'is-invalid': isSubmitted && f.userId.errors }"/>
+              <small class="text-danger" *ngIf="(loginForm.controls['userId'].hasError('required') && loginForm.controls['userId'].dirty) ||
+              (loginForm.controls['userId'].hasError('required') && loginForm.controls['userId'].touched)"> Please Input all fields</small>
+             <small class="text-danger" *ngIf="(loginForm.controls.userId.errors?.pattern) || ((loginForm.controls.userId.errors?.minlength))">Please Input a valid Login Name</small>
+            </div>
+            <div class="form-control-alignment">
+              <input type="search" maxlength="7" placeholder="Password" formControlName="password" class="form-control-input border-r-p75"
+              [ngClass]="{ 'is-invalid': isSubmitted && f.password.errors }"/>
+              <small class="text-danger" *ngIf="(loginForm.controls['password'].hasError('required') && loginForm.controls['password'].dirty) ||
+              (loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched)"> Please Input all fields</small>
+            </div>
+            <div class="form-control-alignment">
+               <button class="form-control-input border-r-p75">Login</button>
+            </div>
+          </form>
+       </mat-card>
+    </div>
+</mat-card>

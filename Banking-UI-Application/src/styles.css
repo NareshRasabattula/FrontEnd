@@ -1,0 +1,329 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, 
+body { 
+  height: 100%; 
+}
+body {
+ margin: 0; 
+ font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+table{
+    width: 100%;
+}
+
+/*css for adding asterisk to requried files*/
+.requried-field::after{
+    content: "*";
+    color: red;
+}
+.requried-field,
+.font-bold{
+    font-weight: bold;
+}
+/*Custom error and success messages display*/
+.errorBlock{
+    display: flex;
+    border: solid 1px red;
+    background-color: rgb(247, 230, 230);
+}
+.errIcon{
+    margin-top: 0.2%;
+    margin-left: 2%;
+}
+.errorMessage{
+    margin-top: 0.5%;
+    margin-left: 2%;
+}
+
+.successBlock{
+    display: flex;
+    border: solid 1px green;
+    background-color: rgb(226, 250, 224);
+    margin-top: 3%;
+}
+
+.successMessage {
+    margin-top: 0.5%;
+    margin-left: 2%;
+    color: green;
+}
+
+.success,
+.success-mat-icon-color{
+    color: green;
+}
+/*end/
+/*sucess and delete mat button colors*/
+.mat-primary{
+    color: #0d6196 !important;
+}
+.mat-success{
+    background-color: green;
+    color: #fff;
+}
+.mat-delete{
+    color: #dd2c00;
+}
+/*table row styles*/
+.mat-row{
+    height: 20px;
+}
+.mat-header-row{
+    height: 40px !important;
+}
+
+/*Scrolle Bar styles*/
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    background: #bbb;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    width: 10px;
+}
+
+/*table Styles*/
+.table-container{
+    max-height: 10px;
+    overflow-y: auto;
+}
+
+/*dropdown*/
+.dropdown{
+    height: 26px;
+    width: fit-content;
+}
+/*Action buttons*/
+.saveButton{
+    margin-top: 3%;
+    margin-left: 43%;
+}
+.cancelButton{
+    margin-top: 3%;
+    margin-left: 2% !important;
+}
+.submitButton{
+    margin-top: 3%;
+    margin-left: 43%;
+}
+.addButton{
+    margin-left: 43%;
+}
+/*data forms*/
+.data-form{
+    margin-top: 4%;
+    overflow: auto;
+}
+
+/*search bar component*/
+.searchBar{
+    margin-top: 1%;
+    background: white;
+}
+
+.no-resize{
+    resize: none;
+}
+
+/*mat tabs*/
+.mat-tab-label-content{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.mat-table-label-active{
+    opacity: 3;
+    background: linear-gradient(180deg, #eee, #fff);
+}
+
+.mat-tab-body-wrapper,
+.mat-tab-bidy.mat-tab-body-active,
+.mat-tab-body-content
+.table-container-auto-over-flow{
+    overflow: auto;
+}
+/*not applicable*/
+.notApplicable{
+    text-align: center;
+    margin-top: 2%;
+}
+.hyperlink:hover{
+    cursor: pointer;
+}
+.hyperlink{
+    color: rgba(13, 97, 150) !important;
+}
+.font-large{
+    font-size: large;
+}
+.border-bottom-text{
+    border-bottom: 1px solid;
+}
+/*creditinfo  form css*/
+.creditInfo-input,
+.no-border-outline{
+    border: none;
+    outline: none;
+    color: black !important;
+}
+.margin-top-2p{
+    margin-top: 2%;
+}
+.margin-top-1p{
+    margin-top: 1%;
+}
+.margin-top-3p{
+    margin-top: 3%;
+}
+.margin-bottom-3p{
+    margin-top: 3%;
+}
+.margin-bottom-1p{
+    margin-top: 1%;
+}
+
+.creditInfo-label,
+.label{
+    font-weight: bold;
+    color: black !important;
+}
+.mat-form-field-appearance-legacy .mat-hint,
+.error-mat-icon-color, 
+.text-color-red{
+  color: red !important;
+}
+.active{
+    background-color: rgb(194, 196, 196);
+}
+.no-wrap{
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.border-r-p75{
+    border-radius: 0.75rem !important;
+}
+.error-message{
+    color: #ff0000;
+    padding-top: 0.3125rem;
+}
+.mat-card-subtitle{
+    margin-right: initial !important;
+}
+
+.margin-right-1p{
+    margin-right: 1%;
+}
+
+.width-90p{
+    width: 90%;
+}
+.width-200p{
+    width: 200%;
+}
+
+.width-20p{
+    width: 20%;
+}
+
+input[type="search"]{
+    appearance: auto;
+}
+
+.hide-data{
+    display: none;
+}
+
+.text-danger{
+    color: #dc3545;
+}
+
+.mat-sort-header-container{
+    justify-content: center;
+}
+
+.container-save-delete,
+.container-submit-cancel{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.margin-left-3p{
+    margin-left: 3%;
+}
+
+.form-control-input{
+    display: block;
+    width: 100%;
+    height: calc(1.5rem + 0.75rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-clip: padding-box;
+    border: 1.5px solid #ced4da;
+    border-radius: 0.50rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 2%;
+}
+
+.form-control-input:focus{
+    color: #495057;
+    outline: 0;
+}
+
+.width-100p{
+    width: 100px;
+}
+
+.field-alignment{
+    display: flex;
+    flex-direction: row;
+}
+
+.filed-value-alignment{
+    position: absolute;
+    left: 16%;
+}
+
+.padding-1p{
+    padding: 1%;
+}
+
+.background-highlighted{
+    background-color: #F5F5F5;
+}
+
+.sub-heading{
+    color: #0d6196 !important;
+}
+
+.min-width-100px{
+    min-width: 100px;
+}
+
+h3{
+    color: #0d6196;
+    margin: 0% !important;
+    font-weight: bold !important;
+}
+
+h3{
+    color: #0d6196;
+    margin: 0% 0% 0% 3% !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+}
+
+.mat-button[disabled]{
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+
