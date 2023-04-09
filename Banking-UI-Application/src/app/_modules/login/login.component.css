@@ -4,11 +4,10 @@
 }
 
 .bank_logo {
-    height: 8rem;
-    margin-bottom: 3.5rem;
-    margin-left: 35%;
+    height: 4rem;
+    margin-bottom: 2.5rem;
+    margin-left: 43%;
     margin-top: 2%;
-    align-items: center;
 }
 
 .card-body{
@@ -28,7 +27,7 @@
 }
 
 .errorIcon{
-    margin-top: 0.7%;
+    margin-top: 0.2%;
     margin-left: 2%;
 }
 
@@ -38,9 +37,11 @@
 }
 
 .form-control-alignment{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
+
+
 
 input:focus::placeholder{
     color: transparent;
@@ -55,7 +56,7 @@ input:focus{
 }
 
 #login-btn{
-    background: linear-gradient(90deg, #25aa5c,#3cd89c);
+    background: linear-gradient(90deg, #40dc7e,#78dd5e);
 }
 
 .login-card{

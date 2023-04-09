@@ -263,16 +263,17 @@ input[type="search"]{
 .form-control-input{
     display: block;
     width: 100%;
-    height: calc(1.5rem + 0.75rem + 2px);
+    height: calc(1.5em + 0.75rem + 2px);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: black;
     background-clip: padding-box;
-    border: 1.5px solid #ced4da;
-    border-radius: 0.50rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    padding: 2%;
+        
+
 }
 
 .form-control-input:focus{

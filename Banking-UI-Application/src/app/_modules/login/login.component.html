@@ -1,7 +1,7 @@
 <mat-card id="login-page">
     <div fxLayout = "column">
       <div fxFlexAlign = "center">
-        <img [src] = "bank_log_url" alt="bank_logo" class= "bank_logo" />
+        <img [src] = "bank_logo_url" alt="bank_logo" class= "bank_logo" /> 
       </div>   
     </div>
     <div class="card-body">
@@ -25,15 +25,18 @@
              <small class="text-danger" *ngIf="(loginForm.controls.userId.errors?.pattern) || ((loginForm.controls.userId.errors?.minlength))">Please Input a valid Login Name</small>
             </div>
             <div class="form-control-alignment">
-              <input type="search" maxlength="7" placeholder="Password" formControlName="password" class="form-control-input border-r-p75"
+              <input type="password" placeholder="Password" formControlName="password" class="form-control-input border-r-p75"
               [ngClass]="{ 'is-invalid': isSubmitted && f.password.errors }"/>
               <small class="text-danger" *ngIf="(loginForm.controls['password'].hasError('required') && loginForm.controls['password'].dirty) ||
               (loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched)"> Please Input all fields</small>
-            </div>
+            </div> 
             <div class="form-control-alignment">
-               <button class="form-control-input border-r-p75">Login</button>
+               <button id="login-btn" [disabled]="loading" class="form-control-input border-r-p75" mat-flat-button color="success">
+                <span *ngIf="loading" class="spinner-boder spinner-border-sm mr-1"></span>
+                Login
+              </button>
             </div>
           </form>
        </mat-card>
     </div>
-</mat-card>
+</mat-card> 
