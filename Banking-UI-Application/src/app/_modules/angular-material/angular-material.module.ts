@@ -21,6 +21,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -49,7 +51,9 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatListModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule
   ],
   exports:[
     MatTabsModule,
@@ -72,7 +76,9 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatListModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule
   ]
 })
 export class AngularMaterialModule { }

@@ -1,0 +1,141 @@
+[
+    {
+        "title": "Acct_Nature Param",
+        "module":"",
+        "id":"accountNatureInquiry",
+        "link": "acount-nature"
+    },
+    {
+        "title": "Credit Checking",
+        "module":"",
+        "id":"creditCheck",
+        "link": "credit-checking"
+    },
+    {
+        "title": "Credit Information",
+        "module":"",
+        "id":"creditInfoInquiry",
+        "link": "credit-information"
+    },
+    {
+        "title": "Name Search",
+        "module":"",
+        "id":"decomissioned",
+        "link": "name-search"
+    },
+    {
+        "title": "Download Request",
+        "module":"",
+        "id":"downloadRequestInquiry",
+        "link": "download-request"
+    },
+    {
+        "title": "Acc_Type Param",
+        "module":"",
+        "id":"accountTypeInquiry",
+        "link": "account-type"
+    },
+    {
+        "title": "System Rules",
+        "module":"",
+        "id":"ruleInquiry",
+        "link": "system-rules"
+    },
+    {
+        "title": "Score_Mapping Param",
+        "module":"",
+        "id":"scoreMapInquiry",
+        "link": "score-mapping"
+    },
+    {
+        "title": "SME_Acct_Type Param",
+        "module":"",
+        "id":"smeaccountTypeInquiry",
+        "link": "sme-account-type"
+    },
+    {
+        "title": "TU request",
+        "module":"",
+        "id":"tuHost2HostInquiry",
+        "link": "tu-request"
+    },
+    {
+        "title": "Auto Purging",
+        "module":"",
+        "id":"decomissioned",
+        "link": "auto-purging"
+    },
+    {
+        "title": "TUDF Contribution",
+        "module":"",
+        "id":"tudfContribution",
+        "link": "tudf-contribution"
+    },
+    {
+        "title": "TUEF Submission",
+        "module":"",
+        "id":"tuefSubmission",
+        "link": "tuef-submission"
+    },
+    {
+        "title": "Connected Party-Ind",
+        "module":"",
+        "id":"decomissioned",
+        "link": "connected-party-ind"
+    },
+    {
+        "title": "S85 Monitoring",
+        "module":"",
+        "id":"decomissioned",
+        "link": "s85-monitoring"
+    },
+    {
+        "title": "TUEF_Adhoc Submission",
+        "module":"",
+        "id":"tuefAdhocSubmission",
+        "link": "tuef-adhoc-submission"
+    },
+    {
+        "title": "MCRA Data Contribution",
+        "module":"",
+        "id":"mcraDataContribution",
+        "link": "mcra-data-contribution"
+    },
+    {
+        "title": "MCRA Verification",
+        "module":"",
+        "id":"mcraVerification",
+        "link": "mcra-request"
+    },
+    {
+        "title": "MCRA DCR Screen",
+        "module":"",
+        "id":"mcraVerification",
+        "link": "mcra-dcr-request"
+    },
+    {
+        "title": "System Report Enquiry",
+        "module":"",
+        "id":"mcraVerification",
+        "link": "system-report"
+    },
+    {
+        "title": "Symmetric Key Notification",
+        "module":"",
+        "id":"mcraVerification",
+        "link": "symmetric-key"
+    },
+    {
+        "title": "Scrub Dashboard",
+        "module":"",
+        "id":"decomissioned",
+        "link": "scrub-dashboard"
+    },
+    {
+        "title": "Account Management Uploads",
+        "module":"",
+        "id":"mcraVerification",
+        "link": "acc-managment-uploads"
+    }
+
+]

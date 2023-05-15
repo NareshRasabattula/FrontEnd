@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>Acc_Nature Parm</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngIf="displaySuccessMessage" class="succesBlock">
+        <div class="errorIcon">
+           <mat-icon class="success-mat-icon-color">check_circle_outline</mat-icon>
+        </div>
+        <div class="successMessage">
+          <mat-error class="success">check_circle_outline</mat-error>
+       </div>
+      </div>
+      <div *ngIf="displayErrorMessage" class="errorBlock">
+          <div class="errorIcon">
+             <mat-icon class="error-mat-icon-color">check_outline</mat-icon>
+          </div>
+          <div class="errorMessage">
+            <mat-error>{{errorMessage}}</mat-error>
+         </div>
+        </div>
+        <div [hidden]="hideContent">
+            <mat-card-subtitle id="account-nature-search-card" class="card-search-container">
+              <div id="account-nature-search-div">
+               <div>
+                 <form [formGroup]="accountNatureSearchFromGroup">
+                    <mat-form-field appearance="fill" class="searchBar">
+                        <input matInput #search formControlName="seqno" maxlength="3" name="search" placeholder="Seq No"
+                        value="">
+                    </mat-form-field>
+                    <button class="hyperlink" mat-button color="primary" matTooltip="Search" >
+                    <mat-icon>search</mat-icon></button>
+                 </form>
+               </div>
+              </div>
+              <small class="text-danger" *ngIf=""></small>
+            </mat-card-subtitle>
+        </div>
+</mat-card>

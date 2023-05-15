@@ -124,8 +124,10 @@ table{
 
 /*search bar component*/
 .searchBar{
-    margin-top: 1%;
+    margin-top: 5%;
     background: white;
+    padding: 5px 0px 25px 2px;
+    color: #495057;
 }
 
 .no-resize{
@@ -195,8 +197,7 @@ table{
     color: black !important;
 }
 .mat-form-field-appearance-legacy .mat-hint,
-.error-mat-icon-color, 
-.text-color-red{
+.error-mat-icon-color, .text-color-red{
   color: red !important;
 }
 .active{
@@ -249,8 +250,7 @@ input[type="search"]{
     justify-content: center;
 }
 
-.container-save-delete,
-.container-submit-cancel{
+.container-save-delete,.container-submit-cancel{
     display: flex;
     justify-content: center;
     margin-top: 3%;
@@ -272,7 +272,7 @@ input[type="search"]{
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        
+    padding: 2%;    
 
 }
 
@@ -328,3 +328,6 @@ h3{
   color: rgba(0, 0, 0, 0.26) !important;
 }
 
+mat-card-title{
+    font-size: 30px;
+}

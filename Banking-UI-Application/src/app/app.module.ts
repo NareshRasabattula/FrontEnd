@@ -14,6 +14,12 @@ import { EnvSeriveProvider } from './env.service.provider';
 import { TokenInterceptor } from './_shared/interceptors/token.interceptor';
 import { LandingPageModule } from './_modules/landing-page/landing-page.module';
 import { LayoutModule } from './_modules/layout/layout.module';
+import { McraDataContributionModule } from './_modules/mcra-data-contribution/mcra-data-contribution.module';
+import { McraRequestModule } from './_modules/mcra-request/mcra-request.module';
+import { McraDcrRequestModule } from './_modules/mcra-dcr-request/mcra-dcr-request.module';
+import { SymmetricKeyModule } from './_modules/symmetric-key/symmetric-key.module';
+import { AccManagementUploadsModule } from './_modules/acc-management-uploads/acc-management-uploads.module';
+import { AccountNatureModule } from './_modules/account-nature/account-nature.module';
 
 @NgModule({
   declarations: [
@@ -27,8 +33,13 @@ import { LayoutModule } from './_modules/layout/layout.module';
     AngularMaterialModule,
     HttpClientModule,
     LandingPageModule,
-    LayoutModule
-    
+    LayoutModule,
+    McraDataContributionModule,
+    McraRequestModule,
+    McraDcrRequestModule,
+    SymmetricKeyModule,
+    AccManagementUploadsModule,
+    AccountNatureModule
   ],
   exports:[
     ReactiveFormsModule

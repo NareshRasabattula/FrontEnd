@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>Mcra Verification</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngIf="displaySuccessMessage" class="succesBlock">
+      <div class="errorIcon">
+         <mat-icon class="success-mat-icon-color">check_circle_outline</mat-icon>
+      </div>
+      <div class="successMessage">
+        <mat-error class="success">check_circle_outline</mat-error>
+     </div>
+    </div>
+    <div *ngIf="displayErrorMessage" class="errorBlock">
+        <div class="errorIcon">
+           <mat-icon class="error-mat-icon-color">check_outline</mat-icon>
+        </div>
+        <div class="errorMessage">
+          <mat-error>{{errorMessage}}</mat-error>
+       </div>
+      </div>
+      <form [formGroup] = "mcraSearch">
+        <mat-card-subtitle>
+            <div class="flex-container">
+                <mat-form-field class="searchBar">
+                    <mat-label>File Type</mat-label>
+                    <mat-select formControlName="fileType"></mat-select>
+                </mat-form-field>
+            </div>
+        </mat-card-subtitle>
+      </form>
+      </mat-card>

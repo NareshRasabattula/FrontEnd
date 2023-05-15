@@ -1,0 +1,22 @@
+.hr{
+    background-image: linear-gradient(
+        to right,
+        rgba(255,255,255,0),
+        #03c11a,
+        #0d6196,
+        #03c11a
+        rgba(255,255,255,0)
+    );
+    height: 0.0625rem;
+    position: relative;
+    top: -1rem;
+}
+
+.copyright-text{
+    font-size: 0.8rem;
+}
+
+.footer-contents{
+    display: flex;
+    justify-content: space-evenly;
+}

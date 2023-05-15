@@ -1,0 +1,29 @@
+::ng-deep .mat-sort-header-sorted{
+    color: #0d6196;
+    font-weight: 600;
+}
+
+::ng-deep .mat-header-cell{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hide-data{
+    display: none !important;
+}
+
+tr.mat-row,
+th.mat-header-cell{
+    text-align: center !important;
+}
+
+.card-search-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#account-nature-search-div{
+    display: flex;
+    flex-direction: column;
+}

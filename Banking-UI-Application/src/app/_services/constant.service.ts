@@ -18,7 +18,10 @@ export class ConstantService{
  
  /* header constants*/
  readonly mainPageHeader = "Main Page";
+ readonly menuItems = "./assets/menu-items.json";
+  userGroup: './assets/user-group.json';
+ readonly downloadRequestHeader = "Download Request";
   
- 
+ constructor() {}
  
 }

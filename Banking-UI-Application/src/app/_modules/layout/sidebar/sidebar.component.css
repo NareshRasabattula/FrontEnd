@@ -1,0 +1,97 @@
+.side-nav{
+    height: 88vh;
+}
+
+.bank-logo{
+    margin-left: 1.25rem;
+    cursor: pointer;
+}
+
+.listItems{
+    width: 100%;
+}
+
+.bank-logo img{
+    height: 2rem;
+    margin-top: 5%;
+}
+
+.menuIcon {
+    height: 5%;
+}
+
+.userName {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    width: 19%;
+    cursor: pointer;
+}
+
+.menuContent{
+    width: 100%;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.gradient-seperator {
+    background: linear-gradient(900deg, #03c11a 15%, #0c7c3b 25%, #0d6196 60%);
+    height: 0.2rem;
+    margin: 0.2rem 0.3rem 0 -1.25rem;
+}
+
+.mat-list-base .mat-list-item,
+.mat-list-base .mat-list-option{
+    height: 33px;
+    font-size: 15px;
+    color: #0d6196;
+}
+
+mat-list-item:hover{
+    background-color: rgb(194,196,196);
+}
+
+:host ::ng-deep .mat-list-item-content:hover{
+    color: red;
+}
+.parent-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date{
+    background-color: #0d6196;
+    padding: 0.2%;
+    color: white;
+}
+
+#current-date{
+    margin-left: 0.9%;
+}
+
+.bank-logo {
+  margin-left: 1.25rem;
+  cursor: pointer;
+}
+
+.bank-logo img {
+    height: 4rem;
+    margin-top: 5%;
+}
+
+#arrow-img{
+    height: 15px;
+    width: 15px;
+}

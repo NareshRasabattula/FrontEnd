@@ -1,1 +1,50 @@
-<p>sidebar works!</p>
+<div class="parent-div">
+   <div class="left-box">
+     <div>
+        <button class="menuIcon" type="button" mat-button (click)="drawer.toggle()">
+            <mat-icon>list</mat-icon>
+            </button>
+     </div>
+     <div class="bank-logo">
+       <img [src]="bank_logo" />
+     </div>
+   </div>
+   <div class="right-box">
+     <div class="userName">
+       <div>
+         {{userName}}
+       </div>
+       <div> <b> Last Login</b>: {{lastLoginDate}}</div>
+     </div>
+     <div>
+        <button type="button" mat-button matTooltip="Logout" (click)="logout()">
+            <mat-icon>input</mat-icon>
+        </button>
+     </div>
+   </div>
+</div>
+<div class="gradient-seperator"></div>
+<div>
+    <mat-drawer-container class="side-nav">
+      <mat-drawer #drawer mode="side" opened class="menu no-wrap">
+      <mat-list>
+      <mat-list-item class="listItems" [routerLink]="['/'+menu.link]" [routerLinkActive]="['active']" *ngFor="let menu of menuItems">
+        <img id="arrow-img" src="assets/img/arrow-image.png"/>&nbsp;&nbsp;{{menu.title}}</mat-list-item>
+         <mat-divider></mat-divider>
+        </mat-list>
+        </mat-drawer>
+    <app-header></app-header>
+    <div class="mainContent">
+       <div class="date">
+          <span id="current-date">
+            {{date}}
+          </span>
+       </div>
+       <router-outlet></router-outlet>
+    </div>
+    </mat-drawer-container>
+  </div>
+ 
+ 
+   
+
