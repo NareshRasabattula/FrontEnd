@@ -1,0 +1,166 @@
+<div class="product-continer">
+
+  <md-toolbar class="md-table-toolbar md-default" ng-show="!options.rowSelection || !selected.length">
+    <div class="md-toolbar-tools">
+      <span>Product Details</span>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="addProduct()">
+        <md-icon>playlist_add</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" ng-click="loadStuff()">
+        <md-icon>refresh</md-icon>
+      </md-button>
+      <md-button class="md-icon-button">
+        <md-icon>filter_list</md-icon>
+      </md-button>
+      <md-button class="md-icon-button">
+        <md-icon>more_vert</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <!-- Add Product Start -->
+  <div class="product-add" ng-hide = "IsVisible">
+      <md-content layout-padding>
+        <form name="productForm" method="post" enctype="multipart/form-data">
+    
+          <md-input-container class="md-block">
+            <label>Product Name</label>
+            <input md-maxlength="30" name="product_name" ng-model="product.product_name">
+            <div ng-messages="productForm.product_name.$error">
+              <div ng-message="required">This is required.</div>
+              <!--<div ng-message="md-maxlength">The product name must be less than 30 characters long.</div>-->
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block">
+            <label>Product Description</label>
+            <textarea name="product_description" ng-model="product.product_description" md-maxlength="500"></textarea>
+            <div ng-messages="productForm.product_description.$error">
+              <div ng-message="md-maxlength">The product escription must be less than 500 characters long.</div>
+            </div>
+          </md-input-container>
+        
+        <div layout-gt-sm="row">    
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Barcode</label>
+              <input type="text" name="barcode" ng-model="product.barcode">
+            </md-input-container>
+          
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Warehouse</label>
+              <md-select name="warehouse" ng-model="product.warehouse">
+                <md-option value="None">None</md-option>
+                <md-option value="East">East</md-option>
+                <md-option value="West">West</md-option>
+                <md-option value="North">North</md-option>
+                <md-option value="South">South</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Category</label>
+              <md-select name="category" ng-model="product.category">
+                <md-option value="Electronics">Electronics</md-option>
+                <md-option value="Mobile">Mobile</md-option>
+                <md-option value="Cloths">Cloths</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Product SKU</label>
+              <input type="text" name="sku" ng-model="product.sku">
+            </md-input-container>
+
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Product Serial Number</label>
+              <input type="text" name="serial_number" ng-model="product.serial_number">
+            </md-input-container>
+      
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Product Quantity</label>
+              <input type="number" name="quantity" ng-model="product.quantity">
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Reorder Stock Amount</label>
+              <input type="number" name="reordered_stock_amount" ng-model="product.reordered_stock_amount">
+            </md-input-container>
+                   
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Product Purchase Price</label>
+              <input type="number" name="purchase_price" ng-model="product.purchase_price">
+            </md-input-container>
+
+            <md-input-container flex-gt-sm class="md-block">
+              <label>Product Selling Price</label>
+              <input type="number" name="selling_price" ng-model="product.selling_price">
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex="25" class="md-block">
+              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" file-model="product.file" />
+              <hr />
+              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;" />
+            </md-input-container>
+          </div>
+
+          <div class="md-block">
+            <md-button md-no-ink class="md-raised md-primary" type="submit" ng-click="submit()">Submit</md-button>
+          </div>
+    
+        </form>
+      </md-content>
+  </div>
+  <!-- Add Product Ends -->
+
+  <md-toolbar class="md-table-toolbar alternate" ng-show="options.rowSelection && selected.length">
+    <div class="md-toolbar-tools">
+      <span>{{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected</span>
+      <span flex></span>
+      <md-button class="md-icon-button">
+        <md-icon>delete</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  
+  <md-table-container>
+    <table data-md-table data-md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" data-ng-model="selected" md-progress="promise">
+      <thead ng-if="!options.decapitate" md-head data-md-order="query.order" md-on-reorder="onReorder">
+        <tr md-row>
+          <th md-column md:order:by="action">Action</th>
+          <th md-column md:order:by="product.product_image">Image</th>
+          <th md-column md:order:by="product.product_name">Name</th>
+          <th md-column md:order:by="product.wharehouse_id">Warehouse</th>
+          <th md-column md:order:by="product.quantity">Quantity</th>
+          <th md-column md:order:by="product.barcode">Barcode</th>
+          <th md-column md:order:by="product.purchase_price">Purchase Price</th>
+          <th md-column md:order:by="product.selling_price">Selling Price</th>
+          <th md-column md:order:by="product.category_id">Category</th>
+        </tr>
+      </thead>
+      <tbody md-body>
+        <tr md-row md-select="product" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect" x-md-auto-select="options.autoSelect" data-ng-repeat="product in products.products | orderBy: query.order | limitTo: query.limit : (query.page - 1) * query.limit"">
+         
+          <td md-cell><md-icon title="Edit this Product" style="cursor: pointer;">edit</md-icon></td>
+          <td md-cell><img ng-src="{{product.product_image}}" height="20"></td>
+          <td md-cell>{{product.product_name}}</td>
+          <td md-cell>{{product.wharehouse_id}}</td>
+          <td md-cell>{{product.quantity}}</td>
+          <td md-cell>{{product.barcode}}</td>
+          <td md-cell>{{product.purchase_price}}</td>
+          <td md-cell>{{product.selling_price}}</td>
+          <td md-cell>{{product.category_id}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </md-table-container>
+  
+  <data-md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{products.products.count}}" md-on-paginate="onPaginate" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks"></data-md-table-pagination>
+
+</div>

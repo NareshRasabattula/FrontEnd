@@ -1,0 +1,20 @@
+<md-content>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Object Expressions</span>
+            </md-card-title-text>
+        </md-card-title>
+        
+        <md-content layout-gt-sm="row" layout-padding >
+            <div>
+              <md-input-container>
+                <div ng-init="student={name:'Alex K', class:'Fifth', roll:'10',percent:'94%'}">
+                    <p> Student Name: {{ student.name }}</p>
+                    <p> Percentage: {{ student.percent }}</p>
+                </div>
+              </md-input-container>
+        </div>
+        </md-content>
+    </md-card>
+</md-content>
